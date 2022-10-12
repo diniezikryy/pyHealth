@@ -1,0 +1,91 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+  <div class="container-fluid">
+    <h2 class="text-center"><u>Employee Data</u></h2>
+    <br />
+    <table class="table table-sm table-responsive table-dark table-striped">
+      <thead>
+        <tr>
+          <th>EmployeeId</th>
+          <th>Age</th>
+          <th>Attrition</th>
+          <th>Business Travel</th>
+          <th>Daily Rate</th>
+          <th>Department</th>
+          <th>DistanceFromHome</th>
+          <th>Education</th>
+          <th>EducationField</th>
+          <th>EmployeeCount</th>
+          <th>EnvironmentSatisfaction</th>
+          <th>Gender</th>
+          <th>HourlyRate</th>
+          <th>JobInvolvement</th>
+          <th>JobLevel</th>
+          <th>JobRole</th>
+          <th>JobSatisfaction</th>
+          <th>MaritalStatus</th>
+          <th>MonthlyIncome</th>
+          <th>MonthlyRate</th>
+          <th>NumCompaniesWorked</th>
+          <th>Over18</th>
+          <th>OverTime</th>
+          <th>PercentSalaryHike</th>
+          <th>PerformanceRating</th>
+          <th>RelationshipSatisfaction</th>
+          <th>StandardHours</th>
+          <th>Shift</th>
+          <th>TotalWorkingYears</th>
+          <th>TrainingTimesLastYear</th>
+          <th>WorkLifeBalance</th>
+          <th>YearsAtCompany</th>
+          <th>YearsInCurrentRole</th>
+          <th>YearsSinceLastPromotion</th>
+          <th>YearsWithCurrManager</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- jinja2 Technique -->
+        {% for x in employee_objects %}
+        <tr>
+          <td>{{x.EmployeeId}}</td>
+          <td>{{x.Age}}</td>
+          <td>{{x.Attrition}}</td>
+          <td>{{x.BusinessTravel}}</td>
+          <td>{{x.DailyRate}}</td>
+          <td>{{x.Department}}</td>
+          <td>{{x.DistanceFromHome}}</td>
+          <td>{{x.Education}}</td>
+          <td>{{x.EducationField}}</td>
+          <td>{{x.EmployeeCount}}</td>
+          <td>{{x.EnvironmentSatisfaction}}</td>
+          <td>{{x.Gender}}</td>
+          <td>{{x.HourlyRate}}</td>
+          <td>{{x.JobInvolvement}}</td>
+          <td>{{x.JobLevel}}</td>
+          <td>{{x.JobRole}}</td>
+          <td>{{x.JobSatisfaction}}</td>
+          <td>{{x.MaritalStatus}}</td>
+          <td>{{x.MonthlyIncome}}</td>
+          <td>{{x.MonthlyRate}}</td>
+          <td>{{x.NumCompaniesWorked}}</td>
+          <td>{{x.Over18}}</td>
+          <td>{{x.OverTime}}</td>
+          <td>{{x.PercentSalaryHike}}</td>
+          <td>{{x.PerformanceRating}}</td>
+          <td>{{x.RelationshipSatisfaction}}</td>
+          <td>{{x.StandardHours}}</td>
+          <td>{{x.Shift}}</td>
+          <td>{{x.TotalWorkingYears}}</td>
+          <td>{{x.TrainingTimesLastYear}}</td>
+          <td>{{x.WorkLifeBalance}}</td>
+          <td>{{x.YearsAtCompany}}</td>
+          <td>{{x.YearsInCurrentRole}}</td>
+          <td>{{x.YearsSinceLastPromotion}}</td>
+          <td>{{x.YearsWithCurrManager}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock content %}
